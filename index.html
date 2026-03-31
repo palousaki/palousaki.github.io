@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eleni Palousi</title>
+    <meta name="description" content="Personal page of Eleni Palousi – Software Engineer." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍💻</text></svg>" />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --accent: #2563eb;
+        --border: #e5e7eb;
+        --card-hover: #f9fafb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
+
+      header {
+        border-bottom: 2px solid var(--border);
+        padding-bottom: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.2rem;
+      }
+
+      header p {
+        margin: 0.2rem 0;
+        color: var(--muted);
+      }
+
+      .links {
+        margin-top: 0.8rem;
+      }
+
+      .links a {
+        margin-right: 1rem;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 0.3rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1rem;
+      }
+
+      .card {
+        display: block;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 1.2rem 1.4rem;
+        text-decoration: none;
+        color: var(--text);
+        transition: background 0.15s, border-color 0.15s;
+      }
+
+      .card:hover {
+        background: var(--card-hover);
+        border-color: var(--accent);
+      }
+
+      .card h3 {
+        margin: 0 0 0.3rem;
+        font-size: 1rem;
+        color: var(--accent);
+      }
+
+      .card p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      footer {
+        border-top: 1px solid var(--border);
+        margin-top: 3rem;
+        padding-top: 1rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Eleni Palousi</h1>
+        <p>Software Engineer · Komotini, Greece</p>
+        <p>Building things for the web, mobile, and occasionally the kitchen.</p>
+        <div class="links">
+          <a href="https://github.com/palousaki" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/elenipalousi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </header>
+
+      <section>
+        <h2>Projects</h2>
+        <div class="cards">
+          <a class="card" href="https://palousaki.github.io/elenipalousi/" target="_blank" rel="noopener noreferrer">
+            <h3>CV</h3>
+            <p>My professional background, experience, and skills as a Software Engineer.</p>
+          </a>
+          <a class="card" href="https://palousaki.github.io/grandma-cookbook/" target="_blank" rel="noopener noreferrer">
+            <h3>Grandma's Cookbook</h3>
+            <p>A collection of traditional family recipes, kept alive on the web.</p>
+          </a>
+        </div>
+      </section>
+
+      <footer>Eleni Palousi · 2026</footer>
+    </main>
+  </body>
+</html>
