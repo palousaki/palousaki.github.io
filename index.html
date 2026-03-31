@@ -12,62 +12,106 @@
         --text: #1f2937;
         --muted: #6b7280;
         --accent: #2563eb;
+        --accent-light: #eff6ff;
         --border: #e5e7eb;
-        --card-hover: #f9fafb;
       }
 
       * {
         box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
 
       body {
-        margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         background: var(--bg);
         color: var(--text);
         line-height: 1.6;
       }
 
+      /* ── Hero ── */
+      .hero {
+        background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+        border-bottom: 1px solid var(--border);
+        padding: 4rem 1.5rem;
+        text-align: center;
+      }
+
+      .avatar {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background: var(--accent);
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.2rem;
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+        letter-spacing: -0.5px;
+      }
+
+      .hero .subtitle {
+        color: var(--muted);
+        margin-top: 0.3rem;
+        font-size: 1rem;
+      }
+
+      .hero .tagline {
+        color: var(--text);
+        margin-top: 0.8rem;
+        font-size: 1.05rem;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .links {
+        margin-top: 1.2rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+      }
+
+      .links a {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        border: 1.5px solid var(--accent);
+        border-radius: 6px;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: background 0.15s, color 0.15s;
+      }
+
+      .links a:hover {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      /* ── Main content ── */
       .container {
         max-width: 900px;
         margin: 0 auto;
         padding: 3rem 1.5rem;
       }
 
-      header {
-        border-bottom: 2px solid var(--border);
-        padding-bottom: 1.5rem;
-        margin-bottom: 2.5rem;
-      }
-
-      header h1 {
-        margin: 0;
-        font-size: 2.2rem;
-      }
-
-      header p {
-        margin: 0.2rem 0;
-        color: var(--muted);
-      }
-
-      .links {
-        margin-top: 0.8rem;
-      }
-
-      .links a {
-        margin-right: 1rem;
-        color: var(--accent);
-        text-decoration: none;
-        font-weight: 500;
-      }
-
       h2 {
-        font-size: 1.3rem;
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 0.3rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        margin-bottom: 1.2rem;
       }
 
+      /* ── Cards ── */
       .cards {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -75,36 +119,51 @@
       }
 
       .card {
-        display: block;
+        display: flex;
+        flex-direction: column;
         border: 1px solid var(--border);
-        border-radius: 8px;
-        padding: 1.2rem 1.4rem;
+        border-radius: 10px;
+        padding: 1.4rem;
         text-decoration: none;
         color: var(--text);
-        transition: background 0.15s, border-color 0.15s;
+        transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.06);
       }
 
       .card:hover {
-        background: var(--card-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
         border-color: var(--accent);
       }
 
+      .card-icon {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+
       .card h3 {
-        margin: 0 0 0.3rem;
         font-size: 1rem;
+        margin-bottom: 0.3rem;
         color: var(--accent);
       }
 
       .card p {
-        margin: 0;
-        font-size: 0.9rem;
+        font-size: 0.88rem;
         color: var(--muted);
+        flex-grow: 1;
       }
 
+      .card-arrow {
+        margin-top: 1rem;
+        font-size: 0.85rem;
+        color: var(--accent);
+        font-weight: 500;
+      }
+
+      /* ── Footer ── */
       footer {
         border-top: 1px solid var(--border);
-        margin-top: 3rem;
-        padding-top: 1rem;
+        padding: 1.2rem 1.5rem;
         color: var(--muted);
         font-size: 0.85rem;
         text-align: center;
@@ -112,32 +171,38 @@
     </style>
   </head>
   <body>
+
+    <div class="hero">
+      <div class="avatar">EP</div>
+      <h1>Eleni Palousi</h1>
+      <p class="subtitle">Software Engineer · Komotini, Greece</p>
+      <p class="tagline">Building things for the web, mobile, and occasionally the kitchen.</p>
+      <div class="links">
+        <a href="https://palousaki.github.io/elenipalousi/" rel="noopener noreferrer">CV</a>
+        <a href="https://github.com/palousaki" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/elenipalousi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
     <main class="container">
-      <header>
-        <h1>Eleni Palousi</h1>
-        <p>Software Engineer · Komotini, Greece</p>
-        <p>Building things for the web, mobile, and occasionally the kitchen.</p>
-        <div class="links">
-          <a href="https://github.com/palousaki" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/elenipalousi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </header>
-
-      <section>
-        <h2>Projects</h2>
-        <div class="cards">
-          <a class="card" href="https://palousaki.github.io/elenipalousi/" target="_blank" rel="noopener noreferrer">
-            <h3>CV</h3>
-            <p>My professional background, experience, and skills as a Software Engineer.</p>
-          </a>
-          <a class="card" href="https://palousaki.github.io/grandma-cookbook/" target="_blank" rel="noopener noreferrer">
-            <h3>Grandma's Cookbook</h3>
-            <p>A collection of traditional family recipes, kept alive on the web.</p>
-          </a>
-        </div>
-      </section>
-
-      <footer>Eleni Palousi · 2026</footer>
+      <h2>Projects</h2>
+      <div class="cards">
+        <a class="card" href="https://palousaki.github.io/elenipalousi/" rel="noopener noreferrer">
+          <div class="card-icon">📄</div>
+          <h3>CV</h3>
+          <p>My professional background, experience, and skills as a Software Engineer.</p>
+          <div class="card-arrow">View →</div>
+        </a>
+        <a class="card" href="https://palousaki.github.io/grandma-cookbook/" target="_blank" rel="noopener noreferrer">
+          <div class="card-icon">🍲</div>
+          <h3>Grandma's Cookbook</h3>
+          <p>A collection of traditional family recipes, kept alive on the web.</p>
+          <div class="card-arrow">View →</div>
+        </a>
+      </div>
     </main>
+
+    <footer>Eleni Palousi · 2026</footer>
+
   </body>
 </html>
