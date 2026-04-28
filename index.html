@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eleni Palousi</title>
+    <meta name="description" content="Personal page of Eleni Palousi – Software Engineer." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👩‍💻</text></svg>" />
+    <style>
+      :root {
+        --bg: #faf7f4;
+        --text: #2c2416;
+        --muted: #7c6f62;
+        --accent: #c2692a;
+        --accent-light: #fef3e2;
+        --border: #e8ddd4;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #fef3e2 0%, #fdf0e8 100%);
+        border-bottom: 1px solid var(--border);
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+      }
+
+      .avatar {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background: var(--accent);
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.2rem;
+        box-shadow: 0 4px 14px rgba(194, 105, 42, 0.3);
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+        letter-spacing: -0.5px;
+      }
+
+      .hero .subtitle {
+        color: var(--muted);
+        margin-top: 0.3rem;
+        font-size: 1rem;
+      }
+
+      .hero .tagline {
+        color: var(--text);
+        margin-top: 0.8rem;
+        font-size: 1.05rem;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .links {
+        margin-top: 1.2rem;
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+      }
+
+      .links a {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        border: 1.5px solid var(--accent);
+        border-radius: 6px;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: background 0.15s, color 0.15s;
+      }
+
+      .links a:hover {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 1.8rem 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        margin-bottom: 1rem;
+      }
+
+      h3.section-label {
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        margin-bottom: 0.8rem;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1rem;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 1.4rem;
+        text-decoration: none;
+        color: var(--text);
+        transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        border-color: var(--accent);
+      }
+
+      .card-icon {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+
+      .card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+        color: var(--accent);
+      }
+
+      .card p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        flex-grow: 1;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .card-arrow {
+        margin-top: 1rem;
+        font-size: 0.85rem;
+        color: var(--accent);
+        font-weight: 500;
+      }
+
+      .section + .section {
+        margin-top: 1.5rem;
+      }
+
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 1.2rem 1.5rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="hero">
+      <div class="avatar">EP</div>
+      <h1>Eleni Palousi</h1>
+      <p class="subtitle">Software Engineer · Komotini, Greece</p>
+      <p class="tagline">Building things for the web, mobile, and occasionally the kitchen.</p>
+      <div class="links">
+        <a href="https://palousaki.github.io/elenipalousi/" rel="noopener noreferrer">CV</a>
+        <a href="https://github.com/palousaki" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/elenipalousi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <main class="container">
+      <h2>Projects</h2>
+      <div class="section">
+        <h3 class="section-label">Live</h3>
+        <div class="cards">
+          <a class="card" href="https://palousaki.github.io/for-fun/" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon">🕹️</div>
+            <h3>For Fun</h3>
+            <p>A small collection of browser mini games.</p>
+            <div class="card-arrow">View →</div>
+          </a>
+          <a class="card" href="https://palousaki.github.io/grandma-cookbook/" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon">🍲</div>
+            <h3>Grandma's Cookbook</h3>
+            <p>A collection of traditional family recipes, kept alive on the web.</p>
+            <div class="card-arrow">View →</div>
+          </a>
+          <a class="card" href="https://tally-ashy-xi.vercel.app" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon">💸</div>
+            <h3>Tally</h3>
+            <p>A personal expense tracker to log, categorise, and keep tabs on your spending.</p>
+            <div class="card-arrow">View →</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-label">On GitHub</h3>
+        <div class="cards">
+          <a class="card" href="https://github.com/palousaki/whats-cooking" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon">🍳</div>
+            <h3>What's Cooking</h3>
+            <p>A mobile app for ingredient-based recipe discovery and weekly meal planning, built with React Native.</p>
+            <div class="card-arrow">GitHub →</div>
+          </a>
+          <a class="card" href="https://github.com/palousaki/figs-shop" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon">🛍️</div>
+            <h3>Figs Shop</h3>
+            <p>Full-stack Next.js e-shop with Stripe checkout, bilingual EN/GR support, and an admin dashboard.</p>
+            <div class="card-arrow">GitHub →</div>
+          </a>
+          <a class="card" href="https://github.com/palousaki/backlogged" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon">🎮</div>
+            <h3>Backlogged</h3>
+            <p>A React Native mobile app for tracking your personal video game library.</p>
+            <div class="card-arrow">GitHub →</div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer>Eleni Palousi · 2026</footer>
+
+  </body>
+</html>
